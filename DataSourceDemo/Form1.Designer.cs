@@ -48,7 +48,7 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.customersBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.customersDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -214,7 +214,7 @@
             this.customersDataGridView.AutoGenerateColumns = false;
             this.customersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.customersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
+            this.CustomerID,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
@@ -231,11 +231,11 @@
             this.customersDataGridView.Size = new System.Drawing.Size(830, 453);
             this.customersDataGridView.TabIndex = 1;
             // 
-            // dataGridViewTextBoxColumn2
+            // CustomerID
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "CompanyName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "CompanyName";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.CustomerID.DataPropertyName = "CustomerID";
+            this.CustomerID.HeaderText = "CustomerID";
+            this.CustomerID.Name = "CustomerID";
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -332,7 +332,7 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton customersBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView customersDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;

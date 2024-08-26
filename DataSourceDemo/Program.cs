@@ -16,7 +16,7 @@ namespace DataSourceDemo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ejemploConexion());
+            Application.Run(new Form1());
         }
     }
 }

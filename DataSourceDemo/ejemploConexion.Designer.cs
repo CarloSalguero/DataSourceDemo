@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ejemploConexion));
-            System.Windows.Forms.Label customerIDLabel;
             System.Windows.Forms.Label companyNameLabel;
             System.Windows.Forms.Label contactNameLabel;
             System.Windows.Forms.Label contactTitleLabel;
@@ -41,6 +40,7 @@
             System.Windows.Forms.Label countryLabel;
             System.Windows.Forms.Label phoneLabel;
             System.Windows.Forms.Label faxLabel;
+            System.Windows.Forms.Label customerIDLabel;
             this.northwindDataSet = new DataSourceDemo.NorthwindDataSet();
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customersTableAdapter = new DataSourceDemo.NorthwindDataSetTableAdapters.CustomersTableAdapter();
@@ -58,7 +58,6 @@
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.customersBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.customerIDTextBox = new System.Windows.Forms.TextBox();
             this.companyNameTextBox = new System.Windows.Forms.TextBox();
             this.contactNameTextBox = new System.Windows.Forms.TextBox();
             this.contactTitleTextBox = new System.Windows.Forms.TextBox();
@@ -69,7 +68,7 @@
             this.countryTextBox = new System.Windows.Forms.TextBox();
             this.phoneTextBox = new System.Windows.Forms.TextBox();
             this.faxTextBox = new System.Windows.Forms.TextBox();
-            customerIDLabel = new System.Windows.Forms.Label();
+            this.customerIDTextBox = new System.Windows.Forms.TextBox();
             companyNameLabel = new System.Windows.Forms.Label();
             contactNameLabel = new System.Windows.Forms.Label();
             contactTitleLabel = new System.Windows.Forms.Label();
@@ -80,6 +79,7 @@
             countryLabel = new System.Windows.Forms.Label();
             phoneLabel = new System.Windows.Forms.Label();
             faxLabel = new System.Windows.Forms.Label();
+            customerIDLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.northwindDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingNavigator)).BeginInit();
@@ -229,23 +229,6 @@
             this.customersBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
             this.customersBindingNavigatorSaveItem.Text = "Guardar datos";
             this.customersBindingNavigatorSaveItem.Click += new System.EventHandler(this.customersBindingNavigatorSaveItem_Click_1);
-            // 
-            // customerIDLabel
-            // 
-            customerIDLabel.AutoSize = true;
-            customerIDLabel.Location = new System.Drawing.Point(99, 52);
-            customerIDLabel.Name = "customerIDLabel";
-            customerIDLabel.Size = new System.Drawing.Size(68, 13);
-            customerIDLabel.TabIndex = 1;
-            customerIDLabel.Text = "Customer ID:";
-            // 
-            // customerIDTextBox
-            // 
-            this.customerIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "CustomerID", true));
-            this.customerIDTextBox.Location = new System.Drawing.Point(190, 49);
-            this.customerIDTextBox.Name = "customerIDTextBox";
-            this.customerIDTextBox.Size = new System.Drawing.Size(100, 20);
-            this.customerIDTextBox.TabIndex = 2;
             // 
             // companyNameLabel
             // 
@@ -417,6 +400,23 @@
             this.faxTextBox.Size = new System.Drawing.Size(100, 20);
             this.faxTextBox.TabIndex = 22;
             // 
+            // customerIDLabel
+            // 
+            customerIDLabel.AutoSize = true;
+            customerIDLabel.Location = new System.Drawing.Point(99, 52);
+            customerIDLabel.Name = "customerIDLabel";
+            customerIDLabel.Size = new System.Drawing.Size(68, 13);
+            customerIDLabel.TabIndex = 1;
+            customerIDLabel.Text = "Customer ID:";
+            // 
+            // customerIDTextBox
+            // 
+            this.customerIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "CustomerID", true));
+            this.customerIDTextBox.Location = new System.Drawing.Point(190, 49);
+            this.customerIDTextBox.Name = "customerIDTextBox";
+            this.customerIDTextBox.Size = new System.Drawing.Size(100, 20);
+            this.customerIDTextBox.TabIndex = 2;
+            // 
             // ejemploConexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -477,7 +477,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton customersBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox customerIDTextBox;
         private System.Windows.Forms.TextBox companyNameTextBox;
         private System.Windows.Forms.TextBox contactNameTextBox;
         private System.Windows.Forms.TextBox contactTitleTextBox;
@@ -488,5 +487,6 @@
         private System.Windows.Forms.TextBox countryTextBox;
         private System.Windows.Forms.TextBox phoneTextBox;
         private System.Windows.Forms.TextBox faxTextBox;
+        private System.Windows.Forms.TextBox customerIDTextBox;
     }
 }
