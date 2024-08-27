@@ -69,6 +69,9 @@
             this.phoneTextBox = new System.Windows.Forms.TextBox();
             this.faxTextBox = new System.Windows.Forms.TextBox();
             this.customerIDTextBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Redireccion = new System.Windows.Forms.Button();
+            this.cajaTextoID = new System.Windows.Forms.ToolStripTextBox();
             companyNameLabel = new System.Windows.Forms.Label();
             contactNameLabel = new System.Windows.Forms.Label();
             contactTitleLabel = new System.Windows.Forms.Label();
@@ -223,7 +226,8 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.customersBindingNavigatorSaveItem});
+            this.customersBindingNavigatorSaveItem,
+            this.cajaTextoID});
             this.customersBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.customersBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.customersBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -418,11 +422,40 @@
             this.customerIDTextBox.Size = new System.Drawing.Size(100, 20);
             this.customerIDTextBox.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(613, 145);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Redireccion
+            // 
+            this.Redireccion.Location = new System.Drawing.Point(613, 244);
+            this.Redireccion.Name = "Redireccion";
+            this.Redireccion.Size = new System.Drawing.Size(75, 23);
+            this.Redireccion.TabIndex = 24;
+            this.Redireccion.Text = "Redireccion";
+            this.Redireccion.UseVisualStyleBackColor = true;
+            this.Redireccion.Click += new System.EventHandler(this.Redireccion_Click);
+            // 
+            // cajaTextoID
+            // 
+            this.cajaTextoID.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cajaTextoID.Name = "cajaTextoID";
+            this.cajaTextoID.Size = new System.Drawing.Size(100, 25);
+            this.cajaTextoID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.toolStripTextBox1_KeyPress);
+            // 
             // ejemploConexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Redireccion);
+            this.Controls.Add(this.button1);
             this.Controls.Add(customerIDLabel);
             this.Controls.Add(this.customerIDTextBox);
             this.Controls.Add(companyNameLabel);
@@ -489,5 +522,8 @@
         private System.Windows.Forms.TextBox phoneTextBox;
         private System.Windows.Forms.TextBox faxTextBox;
         private System.Windows.Forms.TextBox customerIDTextBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Redireccion;
+        private System.Windows.Forms.ToolStripTextBox cajaTextoID;
     }
 }
