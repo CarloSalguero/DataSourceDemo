@@ -13,7 +13,9 @@ using System.Windows.Forms;
 namespace CapaConexion
 {
     public partial class Form1 : Form
+
     {
+        List<Customers> Customers = new List<Customers>();
         public Form1()
         {
             InitializeComponent();
@@ -39,15 +41,14 @@ namespace CapaConexion
             selectFrom = selectFrom + "      ,[Fax] " + "\n";
             selectFrom = selectFrom + "  FROM [dbo].[Customers]";
 
-            SqlCommand comando = new SqlCommand();
+            SqlCommand comando = new SqlCommand(selectFrom, conexion);
             SqlDataReader reader = comando.ExecuteReader();
 
-            List <Customers > Customers = new List<Customers>();
-
+            
             while (reader.Read())
             {
-
-                Customers customers = new Customers();
+                
+                Customers customers = new Customers(); 
                 customers.CompanyName = reader["CompanyName"] == DBNull.Value ? "" : (String)reader["CompanyName"];
                 customers.ContactName = reader["ContactName"] == DBNull.Value ? "" : (String)reader["ContactName"];
                 customers.ContactTitle = reader["ContactTitle"] == DBNull.Value ? "" : (String)reader["ContactTitle"];
@@ -62,10 +63,16 @@ namespace CapaConexion
                 Customers.Add(customers);
             }
 
+            dataGrid.DataSource = Customers;
+
             MessageBox.Show("Conexion cerrada");
             conexion.Close();
         }
 
-
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            var filtro = Customers.FindAll(X => X.CompanyName.StartsWith(tbFiltro.Text));
+            dataGrid.DataSource = filtro;
+        }
     }
 }
