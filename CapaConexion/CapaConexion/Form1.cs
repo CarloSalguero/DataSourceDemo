@@ -21,10 +21,22 @@ namespace CapaConexion
         private void btCargar_Click(object sender, EventArgs e)
         {
             SqlConnection conexion = new SqlConnection("Data Source=CARLOS\\SQLEXPRESS;Initial Catalog=Northwind;Integrated Security=True;");
+            MessageBox.Show("Conexion creada");
             conexion.Open();
-            MessageBox.Show("Conectado");
+            string selectFrom = "SELECT * FROM [dbo].[Customers]";
+            
+            SqlCommand comando = new SqlCommand();
+            SqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                var customerId = reader[0];
+            }
+
+            MessageBox.Show("Conexion cerrada");
             conexion.Close();
-            MessageBox.Show("Gracias, Conexion finalizada");
         }
+
+
+    }
     }
 }
