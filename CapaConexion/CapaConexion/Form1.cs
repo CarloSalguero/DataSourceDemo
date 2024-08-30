@@ -24,7 +24,7 @@ namespace CapaConexion
         private void btCargar_Click(object sender, EventArgs e)
         {
             SqlConnection conexion = new SqlConnection("Data Source=CARLOS\\SQLEXPRESS;Initial Catalog=Northwind;Integrated Security=True;");
-            MessageBox.Show("Conexion creada");
+            MessageBox.Show("Conexion Creada");
             conexion.Open();
 
             String selectFrom = "";
@@ -73,6 +73,11 @@ namespace CapaConexion
         {
             var filtro = Customers.FindAll(X => X.CompanyName.StartsWith(tbFiltro.Text));
             dataGrid.DataSource = filtro;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            String cadenaConexion = DatosLayer.DataBase.ConnectionString;
         }
     }
 }
